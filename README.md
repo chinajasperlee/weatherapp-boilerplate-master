@@ -1,6 +1,6 @@
 👀 👀 👀
 
-# Richards-Init-Design Commit
+# Richards-Init-Design Commit ~ Group 8
 
 **Taken from Preact Boilerplate / Starter Kit for a Weather App**
 
