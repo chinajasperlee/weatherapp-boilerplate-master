@@ -1,46 +1,245 @@
 @import '~style/helpers';
 
-.container { 
+:root {
+	--transition-speed: all 1s ease-in-out;
+	--show-border: 0px solid green;
+}
+
+// Background and landing pages
+.containerLoad {
+	position: absolute;
 	display: flex;
 	flex-direction: column;
-	background-image: url('../../assets/backgrounds/clear-iphone.jpg');
-	color: #fff;
-	width: 414px;
-	height: 736px;
-	text-align: center;
-	padding-top: 80px;
+	transition: all 1s ease-in-out;
+	opacity: 1;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
+	text-align: center;
+	background-image: url("../../assets/weather/Splash-Screen-Logo.png");
+	background-size: 100% 100%;
 }
-.header {
+.containerfade {
+	position: absolute;
+	background: blue;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	//border: 1px solid rgba(10, 0, 0, .2);
+	transition: var(--transition-speed);
+	text-align: center;
+	background-image: url("../../assets/weather/Splash-Screen-Logo.png");
+	background-size: 100% 100%;
+}
+.fakeContainer {
 	display: flex;
 	flex-direction: column;
-	flex: 1;
+	background: red;
+	transition: var(--transition-speed);
+	width: 100vw;
+	height: 100vh;
+	border: var(--show-border);
+	text-align: center;
+	background-image: url("../../assets/weather/Main-Screen-Day.png");
+	background-size: 100% 100%;
 }
-.details {
-	flex: 4;
+.fakeContainerNight {
+	display: flex;
+	flex-direction: column;
+	background: purple;
+	transition: var(--transition-speed);
+	width: 100vw;
+	height: 100vh;
+	border: var(--show-border);
+	text-align: center;
+	background-image: url("../../assets/weather/Main-Screen-Night.png");
+	background-size: 100% 100%;
 }
-.city {
-	flex: 1;
-	font-size: 1.7em;
-	font-weight: 400;	
+.container{
+	display: flex;
+	flex-direction: column;
+	background-color: red;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background-image: url("../../assets/weather/Main-Screen-Day.png");
+	background-size: 100% 100%;
 }
-.conditions {
-	flex: 1;
-	font-size: 1em;
+.containerNight{
+	display: flex;
+	flex-direction: column;
+	background-color: purple;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background-image: url("../../assets/weather/Main-Screen-Night.png");
+	background-size: 100% 100%;
+}
+// Temp settings
+.temperatureContainer {
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	width: 150px;
+	border: var(--show-border);
+		//padding: 10px;
+	 opacity: 1;
+	 transition: var(--transition-speed);
+}
+.temperatureContainerFade {
+		position: absolute;
+		left: 50%;
+		top: 5%;
+		width: 150px;
+		border: var(--show-border);
+		//padding: 10px;
+	 	opacity: 0;
+	 	transition: var(--transition-speed);
 }
 .temperature {
 	flex: 2;
-	margin-top: 0;
-	font-size: 4.8em;
+	font-size: 6.8em;
 	font-weight: 300;
-	letter-spacing: -12px;
+	letter-spacing: -8px;
+	opacity: 1;
+	text-align: center;
+	opacity: 1;
 }
 .filled:after {
 	content: "°";
-	margin: 0 0 0 1rem;
+	margin: 0 0 0 -.5rem;
 	font-size: 0.5em;
 	font-weight: 100;
 	display: inline-block;
-	padding-top: 10px;
+	//padding-top: 10px;
 	vertical-align: top;
 }
+
+// City settings
+.cityContainer {
+	 position: absolute;
+	 left: 50%;
+	 margin-top: 2%;
+	 margin-left: -100px;
+	 max-width: 200px;
+	 width: 200px;
+	 border: var(--show-border);
+	 padding: 10px;
+	 opacity: 1;
+	 transition: var(--transition-speed);
+}
+.cityContainerFade {
+	 position: absolute;
+	 left: 50%;
+	 margin-top: 2%;
+	 margin-left: -100px;
+	 max-width: 200px;
+	 width: 200px;
+	 //border: 3px solid green;
+	 padding: 10px;
+	 opacity: 0;
+	 transition: var(--transition-speed);
+}
+.city {
+	text-align: center;
+	margin-top: -15px;
+	font-size: 1.8em;
+	font-weight: 200;
+	letter-spacing: -0px;
+	opacity: 0.7;
+}
+
+// Image settings
+.weathPicContainer {
+	position: absolute;
+	top: 5%;
+	right: 50%;
+	border: var(--show-border);
+
+	opacity: 1;
+	transition: var(--transition-speed);
+}
+.weathPicContainerFade {
+	position: absolute;
+	top: 5%;
+	right: 50%;
+	border: var(--show-border);
+	opacity: 0;
+	transition: var(--transition-speed);
+}
+.weathPic {
+	top: 50%;
+	max-height: 140px;
+}
+
+// Mascot Image settings
+.mascPicContainer {
+	position: fixed;
+	top: 31%;
+	left: 50%;
+	transform:translate(-50%);
+	border: var(--show-border);
+	height: 48%;
+	opacity: 1;
+	transition: var(--transition-speed);
+}
+.mascPicContainerFade {
+	position: fixed;
+	top: 31%;
+	left: 50%;
+	transform:translate(-50%);
+	//width: -20px
+	border: var(--show-border);
+	height: 48%;
+	opacity: 0;
+	transition: var(--transition-speed);
+}
+.mascPic {
+	//margin-left: -50%;
+	//left: 50%;
+	height: 90%;
+}
+.adviceContainer {
+	 position: absolute;
+	 left: 50%;
+	 top: 78%;
+	 border: var(--show-border);
+	 opacity: 1;
+	 transition: var(--transition-speed);
+}
+
+.adviceContainerFade {
+	position: absolute;
+	left: 50%;
+	top: 78%;
+	border: var(--show-border);
+	opacity: 0;
+	transition: var(--transition-speed);
+}
+.advice {
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	margin-top: -15px;
+	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 1px;
+	opacity: 1;
+	margin-left: -100%;
+}
+
+
+/*
+@media screen and ( max-width: 220px ){
+    .temperature{
+       margin: 15vh 0 0 25vw;
+    }
+}
+@media screen and ( min-width: 500px ){
+    .temperature{
+       margin: 30vh 0 0 50%;
+    }
+}
+*/
