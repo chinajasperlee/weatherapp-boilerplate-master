@@ -3,6 +3,7 @@
 # Richards-Init-Design Commit
 
 **Taken from Preact Boilerplate / Starter Kit for a Weather App**
+**Does not include /node_modules so either transfer the file or 'run npm install'
 
 ## Set-Up Guide
 - [Installation](#installation)
