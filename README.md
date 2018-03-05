@@ -1,6 +1,6 @@
 👀 👀 👀
 
-*This is an alternative edit to test forks HEllo HElllo*
+*This is an alternative edit to test forks Did this update???*
 
 # Richards-Init-Design Commit ~ Group 8
 
