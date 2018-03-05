@@ -1,6 +1,6 @@
 👀 👀 👀
 
-**This is an edit taken from a different profile**
+**This is an alternative edit to test forks*
 
 # Richards-Init-Design Commit ~ Group 8
 
