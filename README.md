@@ -1,5 +1,7 @@
 👀 👀 👀
 
+**This is an edit taken from a different profile**
+
 # Richards-Init-Design Commit ~ Group 8
 
 **Taken from Preact Boilerplate / Starter Kit for a Weather App**
