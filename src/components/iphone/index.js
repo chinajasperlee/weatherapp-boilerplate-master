@@ -14,9 +14,8 @@ import { cube, foo } from './customFunction.js';
 
 // for testing purposes - changes milliseconds for timers
 const timer = 1000;
-//const timer = 1; // for testings purpose: Skipping splash screen
 var actualDate = Date.now()
-//const testDate = 'March 13, 02:08:20'; // for testings purpose: Sets date
+//const testDate = 'March 13, 02:08:20';
 
 const testDate = actualDate;
 
@@ -72,13 +71,13 @@ export default class Iphone extends Component {
 			weatherPic = "../../assets/weather/moon.png";
 		} else if(conditions.includes("Snow") || conditions.includes("Blizzard") || conditions.includes("Ice")) {
 			console.log(" ** CONDITION IS SNOW **")
-			weatherPic = "../../assets/weather/snow.png";
+			weatherPic = "../../assets/weather/snow.jpg";
 		} else if (conditions.includes("Rain") || conditions.includes("Showers") || conditions.includes("Thunder")) {
 			console.log(" ** CONDITION IS RAIN **")
 			weatherPic = "../../assets/weather/rain.png";
 		} else if (conditions.includes("Cloud") || conditions.includes("Showers") || conditions.includes("Thunder")) {
 			console.log(" ** CONDITION IS RAIN **")
-			weatherPic = "../../assets/weather/sun-cloud.png	";
+			weatherPic = "../../assets/weather/sun-cloud.jpg";
 		} else {
 			console.log(" ** CONDITION IS CLEAR **")
 			weatherPic = "../../assets/weather/sun.png";
@@ -91,7 +90,7 @@ export default class Iphone extends Component {
 			decisionAdvice = "Its time for bed!";
 		} else if (conditions.includes("Rain") || conditions.includes("Showers") || conditions.includes("Thunder")) {
 			console.log(" ** MASCOT IS RAIN CLOTHES ** ")
-			mascotPic = "../../assets/mascot/rain-bear.png";
+			mascotPic = "../../assets/mascot/rain-bear.jpg";
 			decisionAdvice = "Its raining! Wear a Mac and take an umbrella if you go outside";
 		} else if (temp_c <= 12) {
 			console.log(" ** MASCOT IS WARM CLOTHES ** ")
@@ -99,7 +98,7 @@ export default class Iphone extends Component {
 			decisionAdvice = "Its cold! Wrap up warm with a coat and a wooly hat";
 		} else if (temp_c > 12 && temp_c <= 20) {
 			console.log(" ** MASCOT IS NORMAL CLOTHES ** ")
-			mascotPic = "../../assets/mascot/plain-bear.png";
+			mascotPic = "../../assets/mascot/plain-bear.jpg";
 			decisionAdvice = "Nice even weather! Best wear jumper and trousers";
 		} else {
 			console.log(" ** MASCOT IS COOL CLOTHES ** ")
@@ -121,8 +120,8 @@ export default class Iphone extends Component {
 		console.log(" ** TEST MODE INIT **")
 		var hourNow = new Date(testDate);
 		var location = "London"; // shows location
-		var temp_c = 11; //
-		var conditions = "Rain";
+		var temp_c = 21; //
+		var conditions = "Clear";
 
 		var tempInt = Math.round(temp_c);
 		var weatherPic = '';
@@ -135,13 +134,13 @@ export default class Iphone extends Component {
 			weatherPic = "../../assets/weather/moon.png";
 		} else if(conditions.includes("Snow") || conditions.includes("Blizzard") || conditions.includes("Ice")) {
 			console.log(" ** CONDITION IS SNOW **")
-			weatherPic = "../../assets/weather/snow.png";
+			weatherPic = "../../assets/weather/snow.jpg";
 		} else if (conditions.includes("Rain") || conditions.includes("Showers") || conditions.includes("Thunder")) {
 			console.log(" ** CONDITION IS RAIN **")
 			weatherPic = "../../assets/weather/rain.png";
 		} else if (conditions.includes("Cloud") || conditions.includes("Showers") || conditions.includes("Thunder")) {
 			console.log(" ** CONDITION IS RAIN **")
-			weatherPic = "../../assets/weather/sun-cloud.png";
+			weatherPic = "../../assets/weather/sun-cloud.jpg";
 		} else {
 			console.log(" ** CONDITION IS CLEAR **")
 			weatherPic = "../../assets/weather/sun.png";
@@ -154,7 +153,7 @@ export default class Iphone extends Component {
 			decisionAdvice = "Its time for bed!";
 		} else if (conditions.includes("Rain") || conditions.includes("Showers") || conditions.includes("Thunder")) {
 			console.log(" ** MASCOT IS RAIN CLOTHES ** ")
-			mascotPic = "../../assets/mascot/rain-bear.png";
+			mascotPic = "../../assets/mascot/rain-bear.jpg";
 			decisionAdvice = "Its raining! Wear a Mac and take an umbrella if you go outside";
 		} else if (temp_c <= 12) {
 			console.log(" ** MASCOT IS WARM CLOTHES ** ")
@@ -162,7 +161,7 @@ export default class Iphone extends Component {
 			decisionAdvice = "Its cold! Wrap up warm with a coat and a wooly hat";
 		} else if (temp_c > 12 && temp_c <= 20) {
 			console.log(" ** MASCOT IS NORMAL CLOTHES ** ")
-			mascotPic = "../../assets/mascot/plain-bear.png";
+			mascotPic = "../../assets/mascot/plain-bear.jpg";
 			decisionAdvice = "Nice even weather! Best wear jumper and trousers";
 		} else {
 			console.log(" ** MASCOT IS COOL CLOTHES ** ")
@@ -286,7 +285,6 @@ export default class Iphone extends Component {
 		} else if (this.state.showScreen == true) {
 			console.log("Splash Screen closed")
 			console.log("Main page rendered")
-
 			return <this.HomeScreen/>;
 		}
 	}

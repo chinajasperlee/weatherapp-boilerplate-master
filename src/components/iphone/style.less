@@ -5,6 +5,9 @@
 	--show-border: 0px solid green;
 }
 
+//to be deleted
+
+
 // Background and landing pages
 .containerLoad {
 	position: absolute;
@@ -91,8 +94,10 @@
 .temperatureContainerFade {
 		position: absolute;
 		left: 50%;
-		top: 5%;
-		width: 150px;
+		margin-left: 20px;
+		margin-top: 40px;
+		max-width: 200px;
+		width: 400px;
 		border: var(--show-border);
 		//padding: 10px;
 	 	opacity: 0;
@@ -100,12 +105,14 @@
 }
 .temperature {
 	flex: 2;
-	font-size: 6.8em;
+	font-size: 7.8em;
 	font-weight: 300;
 	letter-spacing: -8px;
 	opacity: 1;
+
 	text-align: center;
 	opacity: 1;
+
 }
 .filled:after {
 	content: "°";
@@ -156,43 +163,43 @@
 	position: absolute;
 	top: 5%;
 	right: 50%;
+	//height: 25%;
+	//margin-left: 200px;
 	border: var(--show-border);
-
 	opacity: 1;
 	transition: var(--transition-speed);
 }
 .weathPicContainerFade {
-	position: absolute;
-	top: 5%;
-	right: 50%;
-	border: var(--show-border);
+
 	opacity: 0;
 	transition: var(--transition-speed);
 }
 .weathPic {
+	margin-right: -10px;
 	top: 50%;
-	max-height: 140px;
+	max-height: 160px;
+	//height: 100%;
+
 }
 
 // Mascot Image settings
 .mascPicContainer {
 	position: fixed;
-	top: 31%;
+	top: 30%;
 	left: 50%;
 	transform:translate(-50%);
 	border: var(--show-border);
-	height: 48%;
+	height: 50%;
 	opacity: 1;
 	transition: var(--transition-speed);
 }
 .mascPicContainerFade {
-	position: fixed;
-	top: 31%;
-	left: 50%;
-	transform:translate(-50%);
+	position: absolute;
+	top: 30%;
+	margin-left: 25%;
 	//width: -20px
 	border: var(--show-border);
-	height: 48%;
+	height: 50%;
 	opacity: 0;
 	transition: var(--transition-speed);
 }
@@ -219,13 +226,13 @@
 	transition: var(--transition-speed);
 }
 .advice {
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 	text-align: center;
 	margin-top: -15px;
-	font-size: 1em;
-	font-weight: 300;
-	letter-spacing: 1px;
+	font-size: 1.3em;
+	font-weight: 500;
+	letter-spacing: -0px;
 	opacity: 1;
 	margin-left: -100%;
 }
