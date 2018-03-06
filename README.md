@@ -1,7 +1,5 @@
 👀 👀 👀
 
-*This is an alternative edit to test forks Did this update???*
-
 # Richards-Init-Design Commit ~ Group 8
 
 **Taken from Preact Boilerplate / Starter Kit for a Weather App**
